@@ -1,0 +1,148 @@
+@import '_vars';
+@import '_helpers';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: $green-light-color;
+}
+
+.todo-app {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: $white-green-color;
+    padding: 5%;
+    border-radius: 10px;
+    border: .5px solid $green-darker-color;
+
+    .todo-header {
+        align-self: center;
+        padding-bottom: 8%;
+        font-size: 1.5rem;
+        color: $grey-color;
+    }
+
+    .add-todo {
+        display: flex;
+        padding-bottom: 8%;
+
+        .add-todo-input {
+            display: flex;
+            flex: 1 1 80%;
+            border: 1px solid $green-darker-color;
+            border-radius: 5px 0 0 5px;
+            padding: 3%;
+            color: $grey-color;
+            font-size: 1rem;
+            font-weight: 600;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .add-todo-btn {
+            display: flex;
+            flex: 1 1 20%;
+            justify-content: center;
+            align-items: center;
+            padding: 3% 5%;
+            background-color: $green-darker-color;
+            font-size: .9rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            border-radius: 0 5px 5px 0;
+        }
+    }
+
+    .todo-list {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 4%;
+
+        .todo-item-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .item {
+                display: flex;
+                border: none;
+                font-size: 1.2rem;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background-color: transparent;
+                margin-bottom: 6%;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .item-text-input {
+                display: flex;
+                flex: 1 1 auto;
+                border: none;
+                font-size: 1.2rem;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                margin-bottom: 6%;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .todo-buttons-wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                margin-right: 10%;
+
+                .edit-btn {
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                    margin-right: 50%;
+                }
+
+                .delete-btn {
+                    cursor: pointer;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+
+.todo-clear {
+    align-self: center;
+    padding-top: 4%;
+
+    button {
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: $green-darker-color;
+        font-size: .9rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+    }
+}

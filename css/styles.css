@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgba(204, 242, 244, 0.5);
+}
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  background-color: #F4F9F9;
+  padding: 5%;
+  border-radius: 10px;
+  border: 0.5px solid #A4EBF3;
+}
+.todo-app .todo-header {
+  align-self: center;
+  padding-bottom: 8%;
+  font-size: 1.5rem;
+  color: #474747;
+}
+.todo-app .add-todo {
+  display: flex;
+  padding-bottom: 8%;
+}
+.todo-app .add-todo .add-todo-input {
+  display: flex;
+  flex: 1 1 80%;
+  border: 1px solid #A4EBF3;
+  border-radius: 5px 0 0 5px;
+  padding: 3%;
+  color: #474747;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.todo-app .add-todo .add-todo-input:focus {
+  outline: none;
+}
+.todo-app .add-todo .add-todo-btn {
+  display: flex;
+  flex: 1 1 20%;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 5%;
+  background-color: #A4EBF3;
+  font-size: 0.9rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+.todo-app .todo-list {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4%;
+}
+.todo-app .todo-list .todo-item-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.todo-app .todo-list .todo-item-wrapper .item {
+  display: flex;
+  border: none;
+  font-size: 1.2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: transparent;
+  margin-bottom: 6%;
+}
+.todo-app .todo-list .todo-item-wrapper .item:focus {
+  outline: none;
+}
+.todo-app .todo-list .todo-item-wrapper .item-text-input {
+  display: flex;
+  flex: 1 1 auto;
+  border: none;
+  font-size: 1.2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 6%;
+}
+.todo-app .todo-list .todo-item-wrapper .item-text-input:focus {
+  outline: none;
+}
+.todo-app .todo-list .todo-item-wrapper .todo-buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-right: 10%;
+}
+.todo-app .todo-list .todo-item-wrapper .todo-buttons-wrapper .edit-btn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 50%;
+}
+.todo-app .todo-list .todo-item-wrapper .todo-buttons-wrapper .delete-btn {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.todo-clear {
+  align-self: center;
+  padding-top: 4%;
+}
+.todo-clear button {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #A4EBF3;
+  font-size: 0.9rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=styles.css.map */
