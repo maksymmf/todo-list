@@ -1,7 +1,7 @@
 function todoApp() {
     const todoList = document.querySelector('.todo-list');
     const newTodoInput = document.querySelector('.add-todo-input');
-    const todoLocalStorage = JSON.parse(localStorage.getItem('todo')) || [];
+    let todoLocalStorage = JSON.parse(localStorage.getItem('todo')) || [];
 
     function addNewTodo() {
         const newTodoButton = document.querySelectorAll('.add-todo-btn');
@@ -48,11 +48,11 @@ function todoApp() {
 
         todoList.addEventListener('click', (e) => {
             if (e.target.dataset.button === 'delete-button') {
-                const arrayWithoutRemovedItem = todoLocalStorage.filter((item) => {
+                todoLocalStorage = todoLocalStorage.filter((item) => {
                     return item.text !== e.target.closest('.todo-item-wrapper').firstElementChild.value;
                 });
     
-                localStorage.setItem('todo', JSON.stringify(arrayWithoutRemovedItem));
+                localStorage.setItem('todo', JSON.stringify(todoLocalStorage));
                 
                 const itemWrapper = e.target.closest('.todo-item-wrapper');
     
@@ -67,7 +67,8 @@ function todoApp() {
 
                 itemInput.addEventListener('blur', (e) => {
                     const id = e.target.dataset.id;
-                    const arrayWithEditedItem = todoLocalStorage.map(object => {
+
+                    todoLocalStorage = todoLocalStorage.map(object => {
                         if (object.id === +id) {
                             return {
                                 ...object,
@@ -78,7 +79,7 @@ function todoApp() {
                         return object;
                     });
 
-                    localStorage.setItem('todo', JSON.stringify(arrayWithEditedItem));
+                    localStorage.setItem('todo', JSON.stringify(todoLocalStorage));
 
                     itemInput.setAttribute("readonly", true);
                 });
